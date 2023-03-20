@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .linkOtherPage {
+    @apply bg-none text-neutral-400 hover:text-neutral-500 text-2xl
+  }
+}
