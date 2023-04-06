@@ -4,8 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import React from 'react'
 import Layout from './pages/Layout';
-import LoginAndRegister from './pages/LoginAndRegister';
 import Error404 from './pages/Error404';
+import Account from './pages/Account';
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <Layout>
         <Routes>
           <Route path="/" element={<App/>} />
-          <Route path="/login" element={<LoginAndRegister/>} />
+          <Route path="/account" element={<Account/>} />
           <Route path="/*" element={<Error404/>} />
         </Routes>
       </Layout>

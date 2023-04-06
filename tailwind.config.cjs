@@ -9,6 +9,7 @@ module.exports = {
       spacing: {
           '98': '28rem',
           '100': '32rem',
+          '101': '34rem',
           '102': '36rem',
           '104': '40rem',
           '106': '46rem',
@@ -16,8 +17,13 @@ module.exports = {
           '108': '50rem',
           '110': '54rem',
           '112': '56rem',
-          '113': '58rem'
-          
+          '113': '58rem',
+          '114': '61rem',
+          '116': '62rem',
+          '118': '64rem',
+          '120': '66rem',
+          '122': '68rem',
+          '124': '70rem'          
       },
 
       fontSize: {
@@ -31,6 +37,11 @@ module.exports = {
 
       backgroundImage: {
         'manOnMobileApp': "url('/img/manOnBeatBeast.png')"
+      },
+
+      colors: {
+        '825': '#2E2E2E',
+        '850': '#202020'
       }
 
     },

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function LoginAndRegister() {
+function Account() {
   return (
 
     // <div className="container right-panel-active">
@@ -74,4 +74,4 @@ function LoginAndRegister() {
   )
 }
 
-export default LoginAndRegister
+export default Account
