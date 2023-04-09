@@ -37,9 +37,6 @@ function App() {
           <h1 className='relative text-white text-center text-6xl pt-12'>Zuletzt gehört</h1>
         </div>
       </div>
-
-
-      <Footer/> 
     </div>
   )
 }

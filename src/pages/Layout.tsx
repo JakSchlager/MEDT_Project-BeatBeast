@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 type LayoutProps = {
     children: React.ReactNode;
@@ -7,9 +8,10 @@ type LayoutProps = {
 
 const Layout = ({children}:LayoutProps) => {
   return (
-    <div className='layout h-screen bg-neutral-900'>
+    <div className='layout bg-neutral-900 h-screen'>
       <Header></Header>
       {children}
+      <Footer></Footer>
     </div>
   )
 };

@@ -15,7 +15,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Header() {
   return (
         <header className='w-full relative z-20'>
             <div className="headerBox">
@@ -26,9 +26,9 @@ export default function Example() {
                     </NavLink>
 
                   <div className='navigationBar'>
-                      <NavLink className="linkOtherPage" to={"/"}>Home</NavLink>
-                      <a className="linkOtherPage" href="#">Search</a>
-                      <a className="linkOtherPage" href="#">Bibliothek</a>
+                      <NavLink className="linkOtherPage" to={"/home"}>Home</NavLink>
+                      <a className="linkOtherPage" href={"/home"}>Search</a>
+                      <NavLink className="linkOtherPage" to={"/bibliothek"}>Bibliothek</NavLink>
                       <a className="linkOtherPage" href="#">Upload</a>
                       <NavLink className="linkOtherPage" to={"account"}>Account</NavLink>
                   </div>
@@ -82,13 +82,13 @@ export default function Example() {
                       <hr></hr>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <NavLink
+                            to={"/"}
                             className={classNames(active ? 'bg-825' : '', 'rounded-b block px-20  py-3 text-xl pl-2 text-red-500 duration-200')}
                           >
 
                             Sign out
-                          </a>
+                          </NavLink>
                         )}
                       </Menu.Item>
                     </Menu.Items>

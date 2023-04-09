@@ -7,6 +7,10 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
+          '82': '22rem',
+          '84': '22.4rem',
+          '85': '24.8rem',
+          '86': '26rem',
           '98': '28rem',
           '100': '32rem',
           '101': '34rem',
@@ -46,5 +50,15 @@ module.exports = {
 
     },
   },
-  plugins: [],
+  plugins: [
+    function ({addUtilities}) {
+      const extendUnderline = {
+          '.underline': {
+              'textDecoration': 'underline',
+              'text-decoration-color': 'red',
+          },
+      }
+      addUtilities(extendUnderline)
+  }
+  ],
 }
