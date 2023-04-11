@@ -45,7 +45,7 @@ export default function LoginRegister() {
                             </div>
                         </form>
 
-                        <h2 className="text-white text-lg text-center mt-10">Already have an Account? <NavLink className="text-red-500 hover:underline duration-150" to={"/login"}>Klick me!</NavLink></h2>
+                        <h2 className="text-white text-lg text-center mt-10">Already have an Account? <NavLink className="text-red-600 hover:underline duration-150" to={"/login"}>Klick me!</NavLink></h2>
                         
                     </div>
                     </div>

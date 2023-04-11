@@ -17,8 +17,8 @@ function classNames(...classes) {
 
 export default function Header() {
   return (
-        <header className='w-full relative z-20'>
-            <div className="headerBox">
+        <header className='w-full relative z-20 top-0'>
+            <div className="headerBox top-0">
 
                 <div className="w-full justify-around align-middle flex">
                     <NavLink className="relative" to={"/"}>
@@ -29,8 +29,6 @@ export default function Header() {
                       <NavLink className="linkOtherPage" to={"/home"}>Home</NavLink>
                       <a className="linkOtherPage" href={"/home"}>Search</a>
                       <NavLink className="linkOtherPage" to={"/bibliothek"}>Bibliothek</NavLink>
-                      <a className="linkOtherPage" href="#">Upload</a>
-                      <NavLink className="linkOtherPage" to={"account"}>Account</NavLink>
                   </div>
 
             

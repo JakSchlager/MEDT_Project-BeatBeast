@@ -8,7 +8,7 @@ import Layout from './pages/Layout';
 import Error404 from './pages/Error404';
 import Account from './pages/Account';
 import Login from './pages/Login';
-import Bibliothek from './pages/Bibliothek';
+import Bibliothek from './pages/Bibliothek';  
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

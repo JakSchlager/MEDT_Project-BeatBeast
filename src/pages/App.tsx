@@ -1,6 +1,8 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+import NewsetHitsSliderComponents from '../components/NewsetHitsSliderComponents'
 
 function App() {
 
@@ -23,7 +25,7 @@ function App() {
           <div className='w-100 pt-2 pb-2 mt-10 bg-white hover:bg-neutral-200 duration-200 shadow-white-500/50 border-solid rounded-md'>
             <a className='flex justify-between text-black text-5xl border-solid rounded-md' href="#">
             <img className='ml-8 w-16' src="/img/books.png"/>
-            <h2 className='mt-2 mr-8'>Meine Bibliothek</h2>
+            <NavLink to={"/bibliothek"} className='mt-2 mr-8'>Meine Bibliothek</NavLink>
             </a>
           </div>
         </div>
@@ -31,6 +33,11 @@ function App() {
 
         <div className='w-full bg-neutral-800 p-6 pb-113'>
           <h1 className='text-white text-6xl text-center'>Die neusten Hits</h1>
+
+
+          <div>
+          <NewsetHitsSliderComponents/>
+          </div>
         </div>
         
         <div className='bg-neutral-900 pb-114'>
