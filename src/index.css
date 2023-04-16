@@ -46,6 +46,8 @@
     transform: scaleX(1);
   }
 
+  
+
   .navigationBar {
     display: flex;
     justify-content: space-between;

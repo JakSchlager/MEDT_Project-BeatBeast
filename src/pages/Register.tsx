@@ -16,7 +16,7 @@ export default function LoginRegister() {
                     </div>
 
                     <div className="w-full lg:w-1/2 py-16 px-12 shadow-2xl">
-                        <h2  className="text-4xl mb-4 text-white">Sign Up</h2>
+                        <h1  className="text-4xl mb-4 text-white">Sign Up</h1>
                         <p className="text-white mb-4">
                         Want to feel the Beast in You
                         </p>
@@ -45,7 +45,7 @@ export default function LoginRegister() {
                             </div>
                         </form>
 
-                        <h2 className="text-white text-lg text-center mt-10">Already have an Account? <NavLink className="text-red-600 hover:underline duration-150" to={"/login"}>Klick me!</NavLink></h2>
+                        <h1 className="text-white text-lg text-center mt-10">Already have an Account? <NavLink className="text-red-600 hover:underline duration-150" to={"/login"}>Klick me!</NavLink></h1>
                         
                     </div>
                     </div>

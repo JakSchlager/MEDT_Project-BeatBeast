@@ -59,12 +59,12 @@ export default function Header() {
                     <Menu.Items className="absolute w-60 bg-850 text-right origin-top-right rounded-md mt-0 -ml-12 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <NavLink
+                            to={"/account"}
                             className={classNames(active ? 'bg-825' : '', ' rounded-t block px-20 py-3 text-xl text-white duration-200')}
                           >
                             Account
-                          </a>
+                          </NavLink>
                         )}
                       </Menu.Item>
                       <Menu.Item>

@@ -12,7 +12,7 @@ export default function LoginRegister() {
                     <div className="flex flex-col lg:flex-row h-108 rounded-lg mx-auto shadow-2xl overflow-hidden backdrop-blur-xl">
 
                     <div className="w-full lg:w-1/2 py-16 px-12 shadow-2xl">
-                        <h2  className="text-4xl mb-4 text-white">Sign In</h2>
+                        <h1  className="text-4xl mb-4 text-white">Sign In</h1>
                         <p className="text-white mb-4">
                         Want to feel the Beast in You
                         </p>
@@ -33,7 +33,7 @@ export default function LoginRegister() {
                                 <NavLink to={"/home"} className="w-full shadow-xl text-2xl px-85 bg-red-600 hover:bg-red-700 duration-150 py-3 text-center text-white text-xl border-solid rounded">Login</NavLink>
                             </div>
 
-                            <h2 className="text-white text-lg text-center mt-10">Don't have an Account yet? <NavLink className="text-red-600 hover:underline duration-150" to={"/"}>Klick me!</NavLink></h2>
+                            <h1 className="text-white text-lg text-center mt-10">Don't have an Account yet? <NavLink className="text-red-600 hover:underline duration-150" to={"/"}>Klick me!</NavLink></h1>
 
                         </form>
                         
