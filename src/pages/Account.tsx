@@ -50,7 +50,7 @@ function Account() {
                 </tbody>
               </div>
               
-                <button className='relative top-20 text-white text-2xl bg-neutral-800 hover:bg-#202020 hover:text-gray-400 hover:-mt-1 hover:shadow-2xl duration-150 p-2 border-solid rounded-2xl'>Confirm Changes</button>
+                <button className='relative top-20 text-white text-2xl bg-neutral-800 hover:bg-#202020 hover:text-gray-400 hover:-mt-0.5 hover:shadow-2xl duration-150 p-2 border-solid rounded-2xl'>Confirm Changes</button>
             
             </div>
       </div>

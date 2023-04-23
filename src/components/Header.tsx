@@ -56,7 +56,7 @@ export default function Header() {
                     leaveFrom="transform opacity-100 scale-y-100"
                     leaveTo="transform opacity-0 scale-y-0"
                   >
-                    <Menu.Items className="absolute w-60 bg-850 text-right origin-top-right rounded-md mt-0 -ml-12 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Items className="absolute w-60 bg-850 text-right origin-top-right rounded-md mt-4 -ml-12 ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
                           <NavLink
