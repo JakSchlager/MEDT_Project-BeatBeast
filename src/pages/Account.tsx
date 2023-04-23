@@ -1,50 +1,59 @@
 import { ButtonHTMLAttributes } from 'react';
-import React from 'react'
-import {
-  AiFillTwitterCircle,
-  AiFillLinkedin,
-  AiFillYoutube,
-} from "react-icons/ai";
-import { ImUser } from 'react-icons/im'
+import React from 'react';
+import { FaUserAlt } from 'react-icons/fa';
+import { MdPassword, MdMail } from 'react-icons/md';
+import { AiTwotonePhone } from 'react-icons/ai';
 
 
 function Account() {
   return (
-    <div className='overflow-hidden'>
-        <div className="text-center p-10 py-10 mt-24">
-            <h1 className="text-5xl py-2 text-red-600 md:text-6xl">
-              Account Overview
-            </h1>
-            <div className="mx-auto bg-gradient-to-b from-red-600 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
-              <ImUser size="full" color='white'/>
-            </div>
+      <div className='bg-neutral-900 h-screen relative z-20 overflow-hidden'>
+          <div className="relative text-center top-32">
+              <div className="relative mx-auto cursor-pointer bg-gradient-to-b overflow-hidden from-red-600 hover:bottom-1 hover:shadow-lg hover:shadow-red-600 duration-200 rounded-full md:h-52 md:w-52">
+                <div className='absolute w-52 h-52 flex justify-center items-center'>
+                  <FaUserAlt size="5vh" className='absolute' color='black'/>
+                </div>
+              </div>
 
-            <div className='bg-neutral-800 p-10 text-2xl grid justify-centerw-2/6 text-left'>
-              <tbody className="border-solid border-transparent rounded-md">
-                <tr className="border-solid border-b-red-600 w-105 flex justify-between">
-                  <td className='text-gray-400'>Username</td>
-                  <td className='text-gray-200'>*Username From User*</td>
-                </tr>
+              <div className='relative p-10 text-2xl grid w-full top-12'>
+                <tbody className="border-solid border-transparent relative rounded-md flex justify-center">
+                  <div className='grid gap-8 relative right-10'>
+                    <tr className="relative w-100 p-8 pb-16 grid bg-neutral-800 rounded-2xl hover:shadow-lg hover:shadow-red-600 hover:bottom-0.5 duration-150">
+                      <FaUserAlt color='white' className='w-full' size="2vw"/>
+                      <td className='text-gray-400 relative text-center w-full top-2 text-3xl'>Username</td>
+                      <input type="text" placeholder='Username From User' className='rounded-md relative top-6 p-2'/>
+                    </tr>
+                  
+                    <tr className='relative w-100 p-8 pb-14 grid bg-neutral-800 rounded-2xl hover:shadow-lg hover:shadow-red-600 hover:bottom-0.5 duration-150'>
+                      <MdMail color='white' className='w-full' size="2vw"/>
+                      <td className='text-gray-400 relative text-center w-full top-2 text-3xl'>E-Mail</td>
+                      <input type="text" placeholder='Email From User' className='rounded-md relative top-6 p-2'/>
+                    </tr>
+                  </div>
+                  
 
-                <tr className='w-105 flex justify-between'>
-                  <td className='text-gray-400'>E-Mail</td>
-                  <td className='text-gray-200'>*E-Mail Adress from User*</td>
-                </tr>
+                  <div className='h-full w-1 border-solid border-gray-700 border-l rounded'></div>
 
-                <tr className='w-105 flex justify-between'>
-                  <td className='text-gray-400'>Password</td>
-                  <td className='text-gray-200'>*Password from User*</td>
-                </tr>
-              </tbody>
-            </div>
+                  <div className='grid gap-8 relative left-10'>
+                    <tr className='relative w-100 p-8 pb-14 grid bg-neutral-800 rounded-2xl hover:shadow-lg hover:shadow-red-600 hover:bottom-0.5 duration-150'>
+                      <MdPassword color='white' className='w-full' size="2.5vw"/>
+                      <td className='text-gray-400 relative text-center w-full top-2 text-3xl'>Password</td>
+                      <input type="text" placeholder='Password From User' className='rounded-md relative top-6 p-2' readOnly/>
+                    </tr>
 
+                    <tr className='relative w-100 p-8 pb-14 grid bg-neutral-800 rounded-2xl hover:shadow-lg hover:shadow-red-600 hover:bottom-0.5 duration-150'>
+                      <AiTwotonePhone color='white' className='w-full' size="2.2vw"/>
+                      <td className='text-gray-400 relative text-center w-full top-2 text-3xl'>Phonenumber</td>
+                      <input type="text" placeholder='Phonenumber From User' className='rounded-md relative top-6 p-2' readOnly/>
+                    </tr>
+                  </div>
+                </tbody>
+              </div>
+              
+                <button className='relative top-20 text-white text-2xl bg-neutral-800 hover:bg-#202020 hover:text-gray-400 hover:-mt-1 hover:shadow-2xl duration-150 p-2 border-solid rounded-2xl'>Confirm Changes</button>
             
-
-
-            <button className='text-white text-2xl bg-red-600 hover:bg-red-700 duration-150 p-2 border-solid rounded-md'>Confirm Changes</button>
-          </div>
-    </div>
-  
+            </div>
+      </div>
   )
 }
 
