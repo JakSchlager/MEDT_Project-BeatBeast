@@ -2,7 +2,8 @@ import { ButtonHTMLAttributes } from 'react';
 import React from 'react';
 import { FaUserAlt } from 'react-icons/fa';
 import { MdPassword, MdMail } from 'react-icons/md';
-import { AiTwotonePhone } from 'react-icons/ai';
+import { AiTwotonePhone, AiOutlineUserAdd } from 'react-icons/ai';
+import { NavLink } from 'react-router-dom';
 
 
 function Account() {
@@ -11,7 +12,7 @@ function Account() {
           <div className="relative text-center top-32">
               <div className="relative mx-auto cursor-pointer bg-gradient-to-b overflow-hidden from-red-600 hover:bottom-1 hover:shadow-lg hover:shadow-red-600 duration-200 rounded-full md:h-52 md:w-52">
                 <div className='absolute w-52 h-52 flex justify-center items-center'>
-                  <FaUserAlt size="5vh" className='absolute' color='black'/>
+                  <AiOutlineUserAdd size="5.5vh" className='absolute' color='white'/>
                 </div>
               </div>
 
@@ -50,7 +51,7 @@ function Account() {
                 </tbody>
               </div>
               
-                <button className='relative top-20 text-white text-2xl bg-neutral-800 hover:bg-#202020 hover:text-gray-400 hover:-mt-0.5 hover:shadow-2xl duration-150 p-2 border-solid rounded-2xl'>Confirm Changes</button>
+              <NavLink to={"/home"}><button className='relative top-20 text-white text-2xl bg-neutral-800 hover:bg-#202020 hover:text-gray-300 hover:-mt-0.5 hover:shadow-2xl duration-150 p-2 border-solid rounded-2xl'>Confirm Changes</button></NavLink>
             
             </div>
       </div>
