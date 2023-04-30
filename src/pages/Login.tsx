@@ -16,7 +16,9 @@ export default function LoginRegister() {
                         <p className="text-white mb-4">
                         Want to feel the Beast in You
                         </p>
-                        <form action="#">
+                        <form action="http://localhost/Uebungen/Sommersemester_Projek/MEDT_Project-BeatBeast_Backend/api/Connection.php" method="post">
+                            <input type="text" name="text"></input>
+                            <input type="submit" placeholder="senden"></input>
                             <div className="mt-5">
                                 <input type="text" placeholder="Email or Username" className="border border-gray-400 py-1 px-2 w-full rounded-md"/>
                             </div>

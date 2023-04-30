@@ -2,7 +2,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import NewsetHitsSliderComponents from '../components/NewsetHitsSliderComponents'
+import NewsetHitsSliderComponents from '../components/NewsetHitsSliderComponents.jsx'
 
 function App() {
 
@@ -13,9 +13,8 @@ function App() {
         <br></br>
         
         <div className='top-0'>
-          <div className='flex justify-center'>
-            <img className='absolute w-screen bottom-85 shadow-2xl' src="/img/blueBackground.jpg" />
-            <img className='absolute top-28' src="/img/manOnBeatBeast.png"/>
+          <div className='flex justify-center w-screen'>
+            <img className='absolute top-0' src="/img/manOnBeatBeast.png"/>
           </div>
           <h1 className='headerText'>Want to feel the Beast in You</h1>
         </div>
