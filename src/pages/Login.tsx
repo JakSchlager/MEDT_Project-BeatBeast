@@ -32,7 +32,7 @@ export default function LoginRegister() {
                                 </span>
                             </div>
                             <div className="mt-20">
-                                <NavLink to={"/home"} className="w-full shadow-xl text-2xl px-85 bg-red-600 hover:bg-red-700 duration-150 py-3 text-center text-white text-xl border-solid rounded">Login</NavLink>
+                                <NavLink to={"/home"} className="w-full shadow-xl px-85 bg-red-600 hover:bg-red-700 duration-150 py-3 text-center text-white text-2xl border-solid rounded">Login</NavLink>
                             </div>
 
                             <h1 className="text-white text-lg text-center mt-10">Don't have an Account yet? <NavLink className="text-red-600 hover:underline duration-150" to={"/"}>Klick me!</NavLink></h1>
