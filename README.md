@@ -1,6 +1,6 @@
 ## Links
 
-[Frontend Github](https://github.com/JakSchlager/MEDT_Project-BeatBeast_Backend)
+[Backend Github](https://github.com/JakSchlager/MEDT_Project-BeatBeast_Backend)
 
 ## Run 
 
