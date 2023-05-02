@@ -5,9 +5,9 @@
 ## Run 
 
 ```bash
-    npm install -D tailwindcss
+npm install -D tailwindcss
 ```
 
 ```bash
-    npm run dev
+npm run dev
 ```
