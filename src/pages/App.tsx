@@ -14,7 +14,7 @@ function App() {
         
         <div className='top-0'>
           <div className='flex justify-center w-screen'>
-            <img className='absolute top-0' src="/img/manOnBeatBeast.png"/>
+            <img className='absolute top-0 left-0' src="/img/manOnBeatBeast.png"/>
           </div>
           <h1 className='headerText'>Want to feel the Beast in You</h1>
         </div>

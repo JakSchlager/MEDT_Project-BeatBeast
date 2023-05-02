@@ -20,19 +20,19 @@ export default function LoginRegister() {
                         <p className="text-white mb-4">
                         Want to feel the Beast in You
                         </p>
-                        <form action="#">
+                        <form action="http://localhost/Uebungen/Sommersemester/MEDT_Project-BeatBeast_Backend/api/Register.php" method="post">
                             <div className="">
-                                <input type="text" placeholder="Username" className="border border-gray-400 py-1 px-2 w-full rounded-md"/>
+                                <input type="text" placeholder="Username" name="username" className="border border-gray-400 py-1 px-2 w-full rounded-md"/>
                             </div>
 
                             <div className="mt-5">
-                                <input type="email" placeholder="Email" className="border border-gray-400 py-1 px-2 w-full rounded-md"/>
+                                <input type="email" placeholder="Email" name="email" className="border border-gray-400 py-1 px-2 w-full rounded-md"/>
                             </div>
                             <div className="mt-5">
-                                <input type="password" placeholder="Password" className="border border-gray-400 py-1 px-2 w-full rounded-md"/>
+                                <input type="password" placeholder="Password" name="password1" className="border border-gray-400 py-1 px-2 w-full rounded-md"/>
                             </div>
                             <div className="mt-5">
-                                <input type="password" placeholder="Confirm Password" className="border border-gray-400 py-1 px-2 w-full rounded-md"/>
+                                <input type="password" placeholder="Confirm Password" name="password2" className="border border-gray-400 py-1 px-2 w-full rounded-md"/>
                             </div>
                             <div className="mt-5">
                                 <input type="checkbox" className="border border-gray-400"/>
@@ -41,7 +41,7 @@ export default function LoginRegister() {
                                 </span>
                             </div>
                             <div className="mt-20 ">
-                                <NavLink to={"/home"} className="w-full shadow-xl text-2xl px-84 bg-red-600 hover:bg-red-700 duration-150 py-3 text-center text-white text-xl border-solid rounded">Register Now</NavLink>
+                                <input type="submit" name="submit" className="w-full shadow-xl text-2xl px-84 bg-red-600 hover:bg-red-700 duration-150 py-3 text-center text-white border-solid rounded"></input>
                             </div>
                         </form>
 

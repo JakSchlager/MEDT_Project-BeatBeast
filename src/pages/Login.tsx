@@ -2,7 +2,7 @@ import React from "react";
 import { AiOutlineLock } from "react-icons/ai";
 import { NavLink } from 'react-router-dom'
 
-export default function LoginRegister() {
+export default function LoginRegister() {   
     return (
         <div>
             <img className="absolute z-50 bg-cover h-screen w-screen" src="/img/backgroundimage.png" alt="" />
@@ -16,14 +16,12 @@ export default function LoginRegister() {
                         <p className="text-white mb-4">
                         Want to feel the Beast in You
                         </p>
-                        <form action="http://localhost/Uebungen/Sommersemester_Projek/MEDT_Project-BeatBeast_Backend/api/Connection.php" method="post">
-                            <input type="text" name="text"></input>
-                            <input type="submit" placeholder="senden"></input>
+                        <form action="http://localhost/Uebungen/Sommersemester/MEDT_Project-BeatBeast_Backend/api/Login.php" method="post">
                             <div className="mt-5">
-                                <input type="text" placeholder="Email or Username" className="border border-gray-400 py-1 px-2 w-full rounded-md"/>
+                                <input type="text" name="username" placeholder="Email or Username" className="border border-gray-400 py-1 px-2 w-full rounded-md"/>
                             </div>
                             <div className="mt-5">
-                                <input type="password" placeholder="Password" className="border border-gray-400 py-1 px-2 w-full rounded-md"/>
+                                <input type="password" name="password" placeholder="Password" className="border border-gray-400 py-1 px-2 w-full rounded-md"/>
                             </div>
                             <div className="mt-5 flex">
                                 <input type="checkbox" className="border border-gray-400"/>
@@ -32,7 +30,7 @@ export default function LoginRegister() {
                                 </span>
                             </div>
                             <div className="mt-20">
-                                <NavLink to={"/home"} className="w-full shadow-xl px-85 bg-red-600 hover:bg-red-700 duration-150 py-3 text-center text-white text-2xl border-solid rounded">Login</NavLink>
+                                <input type="submit" placeholder="Anmelden" className="w-full shadow-xl px-85 bg-red-600 hover:bg-red-700 duration-150 py-3 text-white text-3xl border-solid rounded"></input>
                             </div>
 
                             <h1 className="text-white text-lg text-center mt-10">Don't have an Account yet? <NavLink className="text-red-600 hover:underline duration-150" to={"/"}>Klick me!</NavLink></h1>
