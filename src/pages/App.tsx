@@ -15,14 +15,14 @@ function App() {
       <div>
         <br></br>
         
-        <div className='top-0'>
+        <div className='top-0 pb-5'>
           <div className='flex justify-center w-screen'>
             <img className='absolute top-0 left-0' src="/img/manOnBeatBeast.png"/>
           </div>
           <h1 className='headerText'>Want to feel the Beast in You</h1>
         </div>
 
-        <h1 className='w-full text-center text-6xl text-white relative mt-86'>Ihre Playlists</h1>
+        <h1 className='w-full text-center text-6xl text-white relative mt-85'>Ihre Playlists</h1>
 
         <div className='flex w-full justify-center bg-neutral-900 pb-24'>
           <div className='w-100 pt-2 pb-2 mt-10 bg-white hover:shadow-lg hover:shadow-red-600 duration-200 shadow-white-500/50 border-solid rounded-md'>
