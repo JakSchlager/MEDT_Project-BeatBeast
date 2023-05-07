@@ -17,8 +17,9 @@ function classNames(...classes) {
 
 export default function Header() {
   return (
-        <header className='w-full relative z-30 top-0'>
-            <div className="headerBox top-0">
+    <div className=''>
+        <header className='w-full fixed z-30 top-0'>
+            <div className="headerBox">
 
                 <div className="w-full justify-around align-middle flex">
                     <NavLink className="relative" to={"/home"}>
@@ -95,5 +96,6 @@ export default function Header() {
                 </div>
           </div>
         </header>
+      </div>
     )
 }

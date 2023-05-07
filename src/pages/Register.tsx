@@ -41,7 +41,7 @@ export default function LoginRegister() {
                                 </span>
                             </div>
                             <div className="mt-20 ">
-                                <input type="submit" name="submit" className="w-full shadow-xl text-2xl px-84 bg-red-600 hover:bg-red-700 duration-150 py-3 text-center text-white border-solid rounded"></input>
+                                <input type="submit" name="submit" placeholder="Registrieren" className="w-full shadow-xl cursor-pointer text-2xl px-84 bg-red-600 hover:bg-red-700 duration-150 py-3 text-center text-white border-solid rounded"></input>
                             </div>
                         </form>
 

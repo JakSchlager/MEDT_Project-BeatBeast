@@ -2,7 +2,10 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import NewsetHitsSliderComponents from '../components/NewsetHitsSliderComponents.jsx'
+import NewsetHitsSliderComponents from '../components/NewsetHitsSliderComponents'
+import { PlayerProvider } from '../components/Player/usePlayer' 
+import { PlayGround } from '../components/Player/PlayGround'
+
 
 function App() {
 
@@ -31,12 +34,14 @@ function App() {
         </div>
         
 
-        <div className='w-full bg-neutral-800 p-6 pb-113'>
+        <div className='w-full bg-neutral-800 p-6 pb-20'>
           <h1 className='text-white text-6xl text-center'>Die Neusten Hits</h1>
 
 
           <div>
-          <NewsetHitsSliderComponents/>
+          <PlayerProvider>
+            <PlayGround />
+          </PlayerProvider>
           </div>
         </div>
         

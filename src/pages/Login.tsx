@@ -30,7 +30,7 @@ export default function LoginRegister() {
                                 </span>
                             </div>
                             <div className="mt-20">
-                                <input type="submit" placeholder="Anmelden" className="w-full shadow-xl px-85 bg-red-600 hover:bg-red-700 duration-150 py-3 text-white text-3xl border-solid rounded"></input>
+                                <input type="submit" placeholder="Anmelden" className="w-full shadow-xl cursor-pointer relative bg-red-600 hover:bg-red-700 duration-150 py-3 text-white text-3xl border-solid rounded"></input>
                             </div>
 
                             <h1 className="text-white text-lg text-center mt-10">Don't have an Account yet? <NavLink className="text-red-600 hover:underline duration-150" to={"/"}>Klick me!</NavLink></h1>
