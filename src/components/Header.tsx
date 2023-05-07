@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <div className=''>
         <header className='w-full fixed z-30 top-0'>
-            <div className="headerBox">
+            <div className="bg-neutral-800/70 backdrop-blur-xl text-white shadow-black shadow-2xl">
 
                 <div className="w-full justify-around align-middle flex">
                     <NavLink className="relative" to={"/home"}>

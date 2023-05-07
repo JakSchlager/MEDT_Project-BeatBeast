@@ -14,6 +14,8 @@ import {
 import { DefaultThumbnail } from "./DefaultThumbnail";
 import { usePlayer } from "./usePlayer";
 import { secondsToMinutes } from "./utils";
+import { AiOutlineHeart } from "react-icons/ai";
+import { AiFillHeart } from "react-icons/ai";
 
 export const Player = () => {
   const [isRandom, setIsRandom] = useState(false);
@@ -105,9 +107,14 @@ export const Player = () => {
     }
   };
 
+  const [isFavorite, setFavorite] = useState(false);
+  const toggleIfFavourite = () => {
+    setFavorite((prev) => !prev);
+  }
+
   return (
     <div className="fixed w-full bottom-0 inset-x-0 z-10">
-      <div className="py-3 bg-neutral-800/60 backdrop-blur-xl text-white shadow-white shadow-2xl">
+      <div className="py-3 bg-neutral-800/60 backdrop-blur-xl text-white shadow-black shadow-2xl">
         <div className="container mx-auto px-3 lg:px-0 flex justify-between">
           {/* title and thumbnail */}
           <div className="flex items-center lg:w-3/12 gap-3">
@@ -122,18 +129,27 @@ export const Player = () => {
                 <DefaultThumbnail />
               )}
             </div>
-            <div className="flex flex-col gap-1">
-              <h6 className="text-sm font-semibold">{currentMusic.title}</h6>
-              <span className="text-xs text-gray-400">
+            <div className="flex flex-col gap-0.5">
+              <h6 className=" text-base font-semibold">{currentMusic.title}</h6>
+              <span className=" text-md text-gray-400">
                 {currentMusic.artist}
               </span>
+            </div>  
+
+            {/* Heart Icon to make something one of your favourites */}
+            <div className='flex items-center'>
+              <button onClick={toggleIfFavourite}>
+                {isFavorite ? <AiFillHeart size="23px" color="red"/> : <AiOutlineHeart size="23px" color="red"/>}
+              </button>
             </div>
           </div>
+
+
           {/* play/pause and next/prev icons */}
           <div className="w-full grid justify-items-center">
-            <div className="grid grid-cols-3 gap-3 items-center justify-center ">
-              <button className="" onClick={() => skipPrev(currentMusic.src)}>
-                <TbPlayerSkipBack size={20} />
+            <div className="grid grid-cols-3 gap-3 items-center justify-center">
+              <button onClick={() => skipPrev(currentMusic.src)}>
+                <TbPlayerSkipBack size={20} className="relative left-4 top-1"/>
               </button>
               <button
                 onClick={() => {
@@ -143,7 +159,7 @@ export const Player = () => {
                     audioRef.current?.play();
                   }
                 }}
-                className="rounded-full p-1 border "
+                className="rounded-full p-1 border"
               >
                 {currentMusic.isPlaying ? (
                   <TbPlayerPause size={26} />
@@ -151,10 +167,11 @@ export const Player = () => {
                   <TbPlayerPlay size={26} />
                 )}
               </button>
-              <button onClick={() => skipNext(currentMusic.src)}>
+              <button className="relative top-1" onClick={() => skipNext(currentMusic.src)}>
                 <TbPlayerSkipForward size={20} />
               </button>
             </div>
+
             {/* progress */}
             <div className="hidden lg:flex w-6/12 flex-col gap-1 justify-center">
               <Slider
@@ -178,6 +195,7 @@ export const Player = () => {
               </div>
             </div>
           </div>
+
           {/* settings */}
           <div className="flex justify-end gap-3 lg:w-3/12">
             <div className="relative flex items-center h-full" ref={volumeRef}>
