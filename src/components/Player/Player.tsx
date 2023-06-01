@@ -112,6 +112,7 @@ export const Player = () => {
     setFavorite((prev) => !prev);
   }
 
+
   return (
     <div className="fixed w-full bottom-0 inset-x-0 z-10">
       <div className="py-1.5 bg-neutral-800/60 backdrop-blur-xl text-white shadow-black shadow-2xl">

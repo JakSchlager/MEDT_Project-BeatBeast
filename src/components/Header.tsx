@@ -68,16 +68,6 @@ export default function Header() {
                           </NavLink>
                         )}
                       </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-825' : '', 'block px-20 py-3 text-xl text-white duration-200')}
-                          >
-                            Settings
-                          </a>
-                        )}
-                      </Menu.Item>
                       <hr></hr>
                       <Menu.Item>
                         {({ active }) => (
