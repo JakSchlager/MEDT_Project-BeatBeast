@@ -118,7 +118,7 @@ export const Player = () => {
       <div className="py-1.5 bg-neutral-800/60 backdrop-blur-xl text-white shadow-black shadow-2xl">
         <div className="container mx-auto px-3 lg:px-0 flex justify-between">
           {/* title and thumbnail */}
-          <div className="flex items-center lg:w-3/12 gap-3">
+          <div className="flex items-center lg:w-4/12 gap-3">
             <div className="w-24 h-24 lg:flex-shrink-0">
               {currentMusic.thumbnail ? (
                 <img

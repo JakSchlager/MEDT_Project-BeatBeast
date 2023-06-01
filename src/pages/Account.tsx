@@ -12,7 +12,7 @@ function Account() {
           <div className="relative text-center top-24">
               <div className="relative mx-auto cursor-pointer bg-gradient-to-b overflow-hidden from-red-600 hover:bottom-1 hover:shadow-lg hover:shadow-red-600 duration-200 rounded-full md:h-40 md:w-40">
                 <div className='absolute w-40 h-40 flex justify-center items-center'>
-                  <AiOutlineUserAdd size="4vh" className='absolute' color='white'/>
+                  <input type="file" value="" placeholder=''/><AiOutlineUserAdd size="4vh" className='absolute' color='white'/>
                 </div>
               </div>
 

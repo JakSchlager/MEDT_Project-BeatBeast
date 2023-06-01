@@ -2,6 +2,8 @@ import React from 'react'
 import { TbPlayerPause, TbPlayerPlay } from "react-icons/tb";
 import { DefaultThumbnail } from "./DefaultThumbnail";
 import { usePlayer } from "./usePlayer";
+import { PlayerProps } from './types';
+import { musics } from './musics';
 
 export const PlayGround = () => {
   const { playList, setCurrentMusic, currentMusic } = usePlayer();
@@ -10,6 +12,7 @@ export const PlayGround = () => {
       <div className="grid grid-cols-3 gap-10 mt-10 justify-items-center">
         {playList.map((music) => {
           const isPlaying = currentMusic.src === music.src;
+          
           return (
 
               <div
