@@ -70,7 +70,7 @@
     position: absolute;
     left: 0;
     bottom: -2px;
-    width: 6.8vw;
+    width: 8.5vw;
     height: 0.1vh;
     background: #fff;
     border-radius: 5px;
@@ -118,4 +118,18 @@
     height: 7vh;
   }
 
+  input[type=file] {
+    
+    height: 10vw;
+    width: 10vw;
+    border: solid; 
+    border-color: transparent;
+    background-image: url('img/addProfilePicture.png');
+    background-size: 5.5vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+  }
 }

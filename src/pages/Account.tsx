@@ -2,17 +2,21 @@ import { ButtonHTMLAttributes } from 'react';
 import React from 'react';
 import { FaUserAlt } from 'react-icons/fa';
 import { MdPassword, MdMail } from 'react-icons/md';
-import { AiTwotonePhone, AiOutlineUserAdd } from 'react-icons/ai';
+import { AiTwotonePhone} from 'react-icons/ai';
 import { NavLink } from 'react-router-dom';
 
 
+
 function Account() {
+  
   return (
       <div className='bg-neutral-900 h-screen relative z-20 overflow-hidden'>
-          <div className="relative text-center top-24">
+          <form action="" method="post" className="relative text-center top-24">
               <div className="relative mx-auto cursor-pointer bg-gradient-to-b overflow-hidden from-red-600 hover:bottom-1 hover:shadow-lg hover:shadow-red-600 duration-200 rounded-full md:h-40 md:w-40">
                 <div className='absolute w-40 h-40 flex justify-center items-center'>
-                  <input type="file" value="" placeholder=''/><AiOutlineUserAdd size="4vh" className='absolute' color='white'/>
+
+                    <input id='file-input' type="file" accept='image/*' placeholder=''/>
+                        
                 </div>
               </div>
 
@@ -50,10 +54,10 @@ function Account() {
                   </div>
                 </tbody>
               </div>
-              
-              <NavLink to={"/home"}><button className='relative top-10 text-white text-2xl bg-neutral-800 hover:bg-#202020 hover:text-gray-300 hover:-mt-0.5 hover:shadow-2xl duration-150 p-2 border-solid rounded-2xl'>Confirm Changes</button></NavLink>
-            
-            </div>
+
+              <input type="submit" value="Confirm Changes" className='relative top-10 cursor-pointer text-white text-2xl bg-neutral-800 hover:bg-#202020 hover:text-gray-300 hover:-mt-0.5 hover:shadow-2xl duration-150 p-2 border-solid rounded-2xl'/>
+
+            </form>
       </div>
   )
 }

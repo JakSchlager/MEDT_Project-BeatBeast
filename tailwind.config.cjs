@@ -45,7 +45,8 @@ module.exports = {
       },
 
       backgroundImage: {
-        'manOnMobileApp': "url('/img/manOnBeatBeast.png')"
+        'manOnMobileApp': "url('/img/manOnBeatBeast.png')",
+        'addProfilePicture': "url('img/addProfilePicture.png')"
       },
 
       colors: {
