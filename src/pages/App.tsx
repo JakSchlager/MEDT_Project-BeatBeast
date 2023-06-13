@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom'
 import NewsetHitsSliderComponents from '../components/NewsetHitsSliderComponents'
 import { PlayerProvider } from '../components/Player/usePlayer' 
 import { PlayGround } from '../components/Player/PlayGround'
+import { PlayGroundCurrent } from '../components/Player/PlayGroundCurrent'
 
 
 function App() {
@@ -37,18 +38,22 @@ function App() {
         <div className='w-full bg-neutral-800 p-6 pb-20'>
           <h1 className='text-white text-6xl text-center'>Die Neusten Hits</h1>
 
-
           <div>
           <PlayerProvider>
             <PlayGround />
           </PlayerProvider>
-          </div>
         </div>
         
+      </div>
         <div className='bg-neutral-900 pb-114'>
           <h1 className='relative text-white text-center text-6xl pt-12'>Zuletzt Gehört</h1>
+          <div>
+            <PlayerProvider>
+              <PlayGroundCurrent/>
+            </PlayerProvider>
+          </div>
         </div>
-      </div>
+        </div>
     </div>
   )
 }

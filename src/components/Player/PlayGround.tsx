@@ -12,7 +12,6 @@ export const PlayGround = () => {
       <div className="grid grid-cols-3 gap-10 mt-10 justify-items-center">
         {playList.map((music) => {
           const isPlaying = currentMusic.src === music.src;
-          
           return (
 
               <div

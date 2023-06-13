@@ -32,7 +32,7 @@ export default function LoginRegister() {
                                 <input type="password" placeholder="Password" name="password" className="border border-gray-400 py-1 px-2 w-full rounded-md"/>
                             </div>
                             <div className="mt-5">
-                                <input type="password" placeholder="Confirm Password" name="retypedPassword" className="border border-gray-400 py-1 px-2 w-full rounded-md"/>
+                                <input type="tel" placeholder="Phone Number" name="phoneNr" className="border border-gray-400 py-1 px-2 w-full rounded-md"/>
                             </div>
                             <div className="mt-5">
                                 <input type="checkbox" className="border border-gray-400"/>
