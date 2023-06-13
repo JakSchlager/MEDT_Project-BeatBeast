@@ -1,7 +1,7 @@
 import React from 'react'
 import { createContext, FC, ReactNode, useContext, useState } from "react";
 import { currentListenedMusic } from './musics/currentListenedSongs';
-import { Player } from "./Player";
+import { PlayerCurrListened } from './PlayerCurrListened';
 import { CurrentMusicType, PlayerContextType } from "./types";
 import { defaultMusic } from "./utils";
 
@@ -30,7 +30,7 @@ export const PlayerProvider: FC<{ children: ReactNode }> = ({ children }) => {
       value={{ currentMusic: current, setCurrentMusic, playList: currentListenedMusic }}
     >
       {children}
-      {current.src && <Player />}
+      {current.src && <PlayerCurrListened />}
     </PlayerContext.Provider>
   );
 };
