@@ -21,7 +21,7 @@ export const PlayGroundCurrent = () => {
                 }}
                 className={`${
                   isPlaying ? "border-red-600" : "border-transparent"
-                } gap-2 w-50 h-82 text-xs relative cursor-pointer transition-shadow duration-150 shadow-xl hover:shadow-xl bg-neutral-800 rounded-2xl overflow-hidden text-white border-2`}
+                } gap-2 w-50 h-82 text-xs relative cursor-pointer shadow-lg shadow-red-600 hover:shadow-md hover:shadow-red-600 transition-shadow duration-150 bg-neutral-800 rounded-2xl overflow-hidden text-white border-2`}
               >
                 <div className="w-48">
                   {music.thumbnail ? (

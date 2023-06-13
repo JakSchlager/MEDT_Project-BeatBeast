@@ -45,7 +45,7 @@ function App() {
         </div>
         
       </div>
-        <div className='bg-neutral-900 pb-114'>
+        <div className='bg-neutral-900 pb-28'>
           <h1 className='relative text-white text-center text-6xl pt-12'>Zuletzt Gehört</h1>
           <div>
             <PlayerProvider>
