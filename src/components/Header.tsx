@@ -1,8 +1,10 @@
-import { Fragment } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { User } from '../type/User'
+
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
@@ -16,6 +18,22 @@ function classNames(...classes) {
 }
 
 export default function Header() {
+  const[user, setUser] = useState<User|null>(null);
+  
+  useEffect(() => {
+      const getUser = async () => {
+        const res = await fetch('/api/GetUser.php');        
+        const data = await res.json();
+        console.log(data);
+        let myUser = new User(data["id"],data["username"], data["email"], data["password"], data["phoneNr"]); 
+        setUser(myUser);        
+      };
+
+      getUser();
+  }, []);
+
+
+
   return (
     <div className=''>
         <header className='w-full fixed z-30 top-0'>
@@ -32,17 +50,16 @@ export default function Header() {
                       <NavLink className="linkOtherPage" to={"/bibliothek"}>Bibliothek</NavLink>
                   </div>
 
-            
 
             <Menu as="div" className="relative ml-3">
-                  <div className='mb-2'>
+                  <div className='accountButton'>
                     <Menu.Button>
                       <span className="sr-only">Open user menu</span>
 
-                      <div className="accountButton">
+                      <div className="">
                         <a className="flex text-white text-2xl" href="#">
                           <img className="h-8 mr-4" src="/img/user.png"/>
-                          Username
+                          {user && user.getName()}
                         </a>
                       </div>
                     </Menu.Button>

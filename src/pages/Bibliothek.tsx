@@ -4,7 +4,7 @@ import { AiOutlineFieldTime } from 'react-icons/ai';
 import { Box, Typography } from '@mui/material';
 import { DataGrid, GridToolbar, GridValueGetterParams } from '@mui/x-data-grid'
 import { GridColDef } from '@mui/x-data-grid';
-import { songData } from '../data/songData';
+
 import { useTheme } from "@mui/material";
 import { tokens } from '../../theme';
 
@@ -109,12 +109,14 @@ export default function Bibliothek() {
                     },
                     }}
                 >
-                    <DataGrid
+                    
+                    {/* <DataGrid
                         columns={columns}
                         rows={songData}
                         components={{ Toolbar: GridToolbar }}
                         hideFooter
                     />
+                     */}
                 </Box>
             </Box>
 

@@ -1,15 +1,15 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import React from 'react'
+import React, { useState, useEffect }  from 'react'
 import { NavLink } from 'react-router-dom'
 import NewsetHitsSliderComponents from '../components/NewsetHitsSliderComponents'
 import { PlayerProvider } from '../components/Player/usePlayer' 
 import { PlayGround } from '../components/Player/PlayGround'
 import { PlayGroundCurrent } from '../components/Player/PlayGroundCurrent'
-
+import { MdLibraryMusic } from 'react-icons/md'
 
 function App() {
-
+  
   return (
     <div className='h-full bg-neutral-900'>
       
@@ -26,10 +26,10 @@ function App() {
         <h1 className='w-full text-center text-6xl text-white relative mt-85'>Ihre Playlists</h1>
 
         <div className='flex w-full justify-center bg-neutral-900 pb-24'>
-          <div className='w-100 pt-2 pb-2 mt-10 bg-white hover:shadow-lg hover:shadow-red-600 duration-200 shadow-white-500/50 border-solid rounded-md'>
-            <a className='flex justify-between text-black hover:text-gray-800 duration-200 text-5xl border-solid rounded-md' href="#">
-            <img className='ml-8 w-16' src="/img/books.png"/>
-            <NavLink to={"/bibliothek"} className='relative top-2 mr-8'>Meine Bibliothek</NavLink>
+          <div className='btn btn-5  w-100 pt-2 pb-2 mt-10 bg-transparent border border-white duration-200 shadow-white-500/50 border-solid rounded-md'>
+            <a className='flex justify-around text-black hover:text-gray-800 duration-200 text-5xl border-solid rounded-md' href="#">
+            <MdLibraryMusic color='white'/>
+            <NavLink to={"/bibliothek"} className='relative mr-8 text-white'>Meine Bibliothek</NavLink>
             </a>
           </div>
         </div>
