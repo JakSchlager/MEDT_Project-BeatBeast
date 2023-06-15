@@ -46,7 +46,7 @@ export default function Header() {
 
                   <div className='navigationBar'>
                       <NavLink className="linkOtherPage" to={"/home"}>Home</NavLink>
-                      <a className="linkOtherPage" href={"/home"}>Search</a>
+                      <a className="linkOtherPage" href={"/search"}>Search</a>
                       <NavLink className="linkOtherPage" to={"/bibliothek"}>Bibliothek</NavLink>
                   </div>
 

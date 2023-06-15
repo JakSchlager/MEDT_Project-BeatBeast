@@ -9,7 +9,7 @@ import Error404 from './pages/Error404';
 import Account from './pages/Account';
 import Login from './pages/Login';
 import Bibliothek from './pages/Bibliothek';  
-
+import Search from './pages/Search';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -21,6 +21,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           <Route path="/home" element={<App/>} />
           <Route path='/bibliothek' element={<Bibliothek/>}/>
           <Route path="/account" element={<Account/>} />
+          <Route path="/search" element={<Search/>}/>
           <Route path="/*" element={<Error404/>} />
         </Routes>
       </Layout>

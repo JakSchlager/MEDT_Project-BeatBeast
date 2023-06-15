@@ -26,7 +26,8 @@ function Account() {
   
   return (
       <div className='bg-neutral-900 h-screen relative z-20 overflow-hidden'>
-          <form action="http://localhost/Uebungen/Sommersemester/MEDT_Project-BeatBeast_Backend/api/UpdateProfile.php.php" method="post" className="relative text-center top-24">
+
+          <form action="http://localhost/Uebungen/Sommersemester/MEDT_Project-BeatBeast_Backend/api/addProfilePic.php" method="POST" className="relative text-center top-24">
               <div className="relative mx-auto cursor-pointer bg-gradient-to-b overflow-hidden from-red-600 hover:bottom-1 hover:shadow-lg hover:shadow-red-600 duration-200 rounded-full md:h-40 md:w-40">
                 <div className='absolute w-40 h-40 flex justify-center items-center'>
 

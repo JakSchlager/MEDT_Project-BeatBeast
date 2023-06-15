@@ -40,7 +40,7 @@ export const PlayGroundCurrent = () => {
                         <p className="text-xs text-gray-400">{music.artist}</p>
                         </div>
 
-                        <div className="flex w-full justify-center items-center text-6xl bg-black/30">
+                        <div className="flex w-full justify-center items-center text-6xl bg-black/20">
                         {isPlaying ? <TbPlayerPause /> : <TbPlayerPlay />}
                         </div>
                     </div>

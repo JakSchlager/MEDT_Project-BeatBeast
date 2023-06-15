@@ -2,7 +2,6 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import React, { useState, useEffect }  from 'react'
 import { NavLink } from 'react-router-dom'
-import NewsetHitsSliderComponents from '../components/NewsetHitsSliderComponents'
 import { PlayerProvider } from '../components/Player/usePlayer' 
 import { PlayGround } from '../components/Player/PlayGround'
 import { PlayGroundCurrent } from '../components/Player/PlayGroundCurrent'
@@ -26,7 +25,7 @@ function App() {
         <h1 className='w-full text-center text-6xl text-white relative mt-85'>Ihre Playlists</h1>
 
         <div className='flex w-full justify-center bg-neutral-900 pb-24'>
-          <div className='btn btn-5  w-100 pt-2 pb-2 mt-10 bg-transparent border border-white duration-200 shadow-white-500/50 border-solid rounded-md'>
+          <div className='w-100 pt-2 pb-2 mt-10 bg-transparent border border-white hover:bg-red-700 hover:text-white duration-150 shadow-white-500/50 border-solid rounded-md'>
             <a className='flex justify-around text-black hover:text-gray-800 duration-200 text-5xl border-solid rounded-md' href="#">
             <MdLibraryMusic color='white'/>
             <NavLink to={"/bibliothek"} className='relative mr-8 text-white'>Meine Bibliothek</NavLink>

@@ -133,21 +133,48 @@
     cursor: pointer;
   }
 
-  .btn-5 {
-    border: 0 solid;
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-    outline: 1px solid;
-    outline-color: rgba(255, 255, 255, .5);
-    outline-offset: 0px;
-    text-shadow: none;
-    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-  } 
-  
-  .btn-5:hover {
-    border: 1px solid;
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 0, 0, 0.2);
-    outline-color: rgba(255, 255, 255, 0);
-    outline-offset: 15px;
-    text-shadow: 1px 1px 2px #427388; 
+  .progress-bar{
+    width: 360px;
+    height: 12px;
+    background-color: #d1d1d1;
+    margin: auto;
+    opacity: .8;
+    position: relative;
+    margin-top: 3vh;
+    color: #fff;
+  }
+
+  .progress-bar::before{
+      content: "0%";
+      position: absolute;
+      left: 0;
+      font-size: 12px;
+      bottom: -18px;
+  }
+
+  .progress-bar::after{
+      content: "100%";
+      position: absolute;
+      right: 0;
+      font-size: 12px;
+      bottom: -18px;
+  }
+
+  .progress-bar span{
+      display: block;
+      width: 75%;
+      height: 12px;
+      background-color: rgb(255, 0, 0);
+      animation: fill 1.5s ease-in 1;
+  }
+
+  @keyframes fill{
+      from{
+          width: 0;
+      }
+      
+      to{
+          width: 75%;
+      }
   }
 }
