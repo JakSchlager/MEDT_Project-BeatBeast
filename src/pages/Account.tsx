@@ -4,10 +4,25 @@ import { FaUserAlt } from 'react-icons/fa';
 import { MdPassword, MdMail } from 'react-icons/md';
 import { AiTwotonePhone} from 'react-icons/ai';
 import { NavLink } from 'react-router-dom';
+import  { useEffect, useState } from 'react'
+import { User } from '../type/User' 
 
 
 
 function Account() {
+  const[user, setUser] = useState<User|null>(null);
+  
+  useEffect(() => {
+      const getUser = async () => {
+        const res = await fetch('/api/GetUser.php');        
+        const data = await res.json();
+        console.log(data);
+        let myUser = new User(data["id"],data["username"], data["email"], data["password"], data["phoneNr"]); 
+        setUser(myUser);        
+      };
+
+      getUser();
+  }, []);
   
   return (
       <div className='bg-neutral-900 h-screen relative z-20 overflow-hidden'>
@@ -26,13 +41,13 @@ function Account() {
                     <tr className="relative w-100 p-8 pb-16 grid bg-neutral-800 rounded-2xl hover:shadow-lg hover:shadow-red-600 hover:bottom-0.5 duration-150">
                       <FaUserAlt color='white' className='w-full' size="2vw"/>
                       <td className='text-gray-400 relative text-center w-full top-2 text-3xl'>Username</td>
-                      <input type="text" name='updateUsername' placeholder='Username From User' className='rounded-md relative top-6 p-2'/>
+                      <input type="text" name='updateUsername' value={user && user.getName()} className='rounded-md relative top-6 p-2 text-gray-400' readOnly/>
                     </tr>
                   
                     <tr className='relative w-100 p-8 pb-14 grid bg-neutral-800 rounded-2xl hover:shadow-lg hover:shadow-red-600 hover:bottom-0.5 duration-150'>
                       <MdMail color='white' className='w-full' size="2vw"/>
                       <td className='text-gray-400 relative text-center w-full top-2 text-3xl'>E-Mail</td>
-                      <input type="text" name='updateEmail' placeholder='Email From User' className='rounded-md relative top-6 p-2'/>
+                      <input type="text" name='updateEmail' value={user && user.getEmail()} className='rounded-md relative top-6 p-2 text-gray-400' readOnly/>
                     </tr>
                   </div>
                   
@@ -43,13 +58,13 @@ function Account() {
                     <tr className='relative w-100 p-8 pb-14 grid bg-neutral-800 rounded-2xl hover:shadow-lg hover:shadow-red-600 hover:bottom-0.5 duration-150'>
                       <MdPassword color='white' className='w-full' size="2.5vw"/>
                       <td className='text-gray-400 relative text-center w-full top-2 text-3xl'>Password</td>
-                      <input type="text" placeholder='Password From User' className='rounded-md relative top-6 p-2' readOnly/>
+                      <input type="password" value={user && user.getPassword()}  className='rounded-md relative top-6 p-2 text-gray-400' readOnly/>
                     </tr>
 
                     <tr className='relative w-100 p-8 pb-14 grid bg-neutral-800 rounded-2xl hover:shadow-lg hover:shadow-red-600 hover:bottom-0.5 duration-150'>
                       <AiTwotonePhone color='white' className='w-full' size="2.2vw"/>
                       <td className='text-gray-400 relative text-center w-full top-2 text-3xl'>Phonenumber</td>
-                      <input type="text" placeholder='Phonenumber From User' className='rounded-md relative top-6 p-2' readOnly/>
+                      <input type="text" value={user && user.getPhoneNr()} className='rounded-md relative top-6 p-2 text-gray-400' readOnly/>
                     </tr>
                   </div>
                 </tbody>

@@ -4,7 +4,7 @@ export class User {
     private email: string;
     private password: string;
     private phoneNr: string; 
-    
+
     constructor(id:number, name:string, email:string, password:string, phoneNr:string) {
         this.id = id;
         this.name = name;
@@ -18,6 +18,9 @@ export class User {
     }
     public getName(): string {
         return this.name;
+    }
+    public getPassword():string {
+        return this.password;
     }
     public getEmail(): string {
         return this.email;
