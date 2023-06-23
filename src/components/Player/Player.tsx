@@ -14,8 +14,9 @@ import {
 import { DefaultThumbnail } from "./DefaultThumbnail";
 import { usePlayer } from "./usePlayer";
 import { secondsToMinutes } from "./utils";
-import { AiOutlineHeart } from "react-icons/ai";
-import { AiFillHeart } from "react-icons/ai";
+import * as ReactIcons from "react-icons/ai";
+import { AiFillHeart, AiOutlineHeart} from "react-icons/ai";
+import { icons } from "react-icons/lib";
 
 export const Player = () => {
   const [isRandom, setIsRandom] = useState(false);
@@ -112,11 +113,32 @@ export const Player = () => {
     setFavorite((prev) => !prev);
   }
 
+  let hearts = ""
+
+  const [data, newData] = useState();
+  
+  // useEffect(() => {
+  //   fetch('/api/createHearts.php?songId=' + currentMusic.id)
+  //     .then((res) => res.text())
+  //     .then((res) => hearts = ReactIcons[res]);
+
+  //   // const getHeart = async () => {
+  //   // const res = await fetch('/api/createHearts.php?songId=' + currentMusic.id);
+  //   // const data = await res.text();
+  //   // newData(data);
+    
+  //   // document.getElementById("hearts")!.innerHTML = data;
+  //   // }
+
+  //   // getHeart();
+  // }, []);
+
 
   return (
     <div className="fixed w-full bottom-0 inset-x-0 z-10">
       <div className="py-1.5 bg-neutral-800/60 backdrop-blur-xl text-white shadow-black shadow-2xl">
         <div className="container mx-auto px-3 lg:px-0 flex justify-between">
+          
           {/* title and thumbnail */}
           <div className="flex items-center lg:w-4/12 gap-3">
             <div className="w-24 h-24 lg:flex-shrink-0">
@@ -139,10 +161,10 @@ export const Player = () => {
 
             {/* Heart Icon to make something one of your favourites */}
             <div className='flex items-center'>
-              <button onClick={toggleIfFavourite}>
-                {isFavorite ? <AiFillHeart size="23px" color="red"/> : <AiOutlineHeart size="23px" color="red"/>}
-              </button>
-            </div>
+            <button id="hearts" onClick={toggleIfFavourite}>
+                {isFavorite ? <AiFillHeart size='23px' color='red'/> : <AiOutlineHeart size='23px' color='red'/>}
+            </button>
+        </div>
           </div>
 
 

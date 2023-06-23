@@ -32,6 +32,9 @@ export default function LoginRegister() {
                                 <input type="password" placeholder="Password" name="password" className="border border-gray-400 py-1 px-2 w-full rounded-md"/>
                             </div>
                             <div className="mt-5">
+                                <input type="password" placeholder="Re-enter Password" name="password2" className="border border-gray-400 py-1 px-2 w-full rounded-md"/>
+                            </div>
+                            <div className="mt-5">
                                 <input type="tel" placeholder="Phone Number (optional)" name="phoneNr" className="border border-gray-400 py-1 px-2 w-full rounded-md"/>
                             </div>
                             <div className="mt-5">
@@ -40,7 +43,7 @@ export default function LoginRegister() {
                                 I accept the <a href="#" className="text-red-500 font-semibold">Terms of Use</a> &  <a href="#" className="text-red-500 font-semibold">Privacy Policy</a> 
                                 </span>
                             </div>
-                            <div className="relative mt-20 px-36">
+                            <div className="relative mt-10 px-36">
                                 <input type="submit" name="submit" value="Registrieren" className="w-full shadow-xl cursor-pointer text-2xl bg-red-600 hover:bg-red-700 duration-150 py-3 text-center text-white rounded"></input>
                             </div>
                         </form>

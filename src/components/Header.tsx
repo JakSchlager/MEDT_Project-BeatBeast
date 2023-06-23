@@ -25,7 +25,7 @@ export default function Header() {
         const res = await fetch('/api/GetUser.php');        
         const data = await res.json();
         console.log(data);
-        let myUser = new User(data["id"],data["username"], data["email"], data["password"], data["phoneNr"]); 
+        let myUser = new User(data["id"],data["username"], data["email"], data["password"], data["phoneNr"], data["profilePic"]); 
         setUser(myUser);        
       };
 

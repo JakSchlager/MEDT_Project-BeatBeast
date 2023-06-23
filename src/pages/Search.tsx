@@ -13,7 +13,7 @@ export default function Search() {
             </div>
             
             <div className='w-full text-center -mt-28'>
-                <NavLink className="text-white bg-red-600 rounded-sm hover:bg-red-700 duration-150 cursor-default p-2" to={"/home"}>Return Home</NavLink>
+                <NavLink className="text-white bg-red-600 rounded-sm hover:bg-red-700 duration-150 cursor-default p-2" to={"/home"}>Return to Home</NavLink>
             </div>
         </div>  
     </div>

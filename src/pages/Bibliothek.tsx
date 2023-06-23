@@ -4,6 +4,7 @@ import { AiOutlineFieldTime } from 'react-icons/ai';
 import { Box, Typography } from '@mui/material';
 import { DataGrid, GridToolbar, GridValueGetterParams } from '@mui/x-data-grid'
 import { GridColDef } from '@mui/x-data-grid';
+import { songData } from '../components/songData';
 
 import { useTheme } from "@mui/material";
 import { tokens } from '../../theme';
@@ -18,13 +19,6 @@ export default function Bibliothek() {
             field: 'id', 
             headerName: '#', 
             width: 70, 
-            headerClassName: 'listHeaderItem',
-        },
-        {
-            field: 'songCover',
-            headerName: 'Cover',
-            width: 100,
-            editable: false,
             headerClassName: 'listHeaderItem',
         },
         {
@@ -45,7 +39,7 @@ export default function Bibliothek() {
             field: 'songLength',
             headerName: <AiOutlineFieldTime size={"20"} color='white'/>,
             type: 'number',
-            width: 320,
+            width: 430,
             editable: false,
             headerClassName: 'listHeaderItem'
         },
@@ -53,7 +47,7 @@ export default function Bibliothek() {
             field: 'liked',
             headerName: <AiFillHeart size={"20"} />,
             type: 'icon',
-            width: 50,
+            width: 80,
             editable: false,
             headerClassName: 'listHeaderItem'
         }
@@ -110,13 +104,13 @@ export default function Bibliothek() {
                     }}
                 >
                     
-                    {/* <DataGrid
+                    <DataGrid
                         columns={columns}
                         rows={songData}
                         components={{ Toolbar: GridToolbar }}
                         hideFooter
                     />
-                     */}
+                    
                 </Box>
             </Box>
 

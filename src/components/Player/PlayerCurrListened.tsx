@@ -109,6 +109,7 @@ export const PlayerCurrListened = () => {
   const [isFavorite, setFavorite] = useState(false);
   const toggleIfFavourite = () => {
     setFavorite((prev) => !prev);
+    
   }
 
 
